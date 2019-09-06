@@ -9,12 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.simx.kittycat.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/home_fragment" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.simx.kittycat.ui.dashboard.DashboardFragment"
+        android:name="com.simx.kittycat.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/profile_fragment" />
 
 </navigation>
