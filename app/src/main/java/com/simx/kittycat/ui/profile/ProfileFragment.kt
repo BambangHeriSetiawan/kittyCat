@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import coil.api.load
+import coil.transform.CircleCropTransformation
 import com.simx.kittycat.MainActivity
 import com.simx.kittycat.R
 import com.simx.kittycat.databinding.ProfileFragmentBinding
@@ -33,6 +35,9 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.imgProfile.load(R.drawable.placeholder){
+            transformations(CircleCropTransformation())
+        }
         binding.btnLogout.setOnClickListener {
             vm.logout()
             LoginActivity.start(this.context!!)
