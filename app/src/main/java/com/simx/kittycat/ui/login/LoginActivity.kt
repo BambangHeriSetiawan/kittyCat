@@ -1,5 +1,7 @@
 package com.simx.kittycat.ui.login
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -57,5 +59,12 @@ class LoginActivity : AppCompatActivity() {
     private fun goToMain(){
         MainActivity.start(this)
         finish()
+    }
+    companion object {
+        fun start(context: Context){
+            val intent = Intent(context, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(intent)
+        }
     }
 }
