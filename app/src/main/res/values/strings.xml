@@ -2,4 +2,8 @@
     <string name="app_name">KittyCat</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="logout">Logout</string>
 </resources>
