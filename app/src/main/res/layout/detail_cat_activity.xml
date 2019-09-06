@@ -6,6 +6,7 @@
         <variable name="detailCatVm" type="com.simx.kittycat.ui.home.detail.DetailCatActivityVM"/>
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.home.detail.DetailCatActivity">
@@ -13,6 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.Toolbar
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"/>
@@ -24,14 +27,19 @@
             android:layout_height="match_parent">
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/vp_detail"
+                android:layout_above="@id/tab_indicator"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_indicator"
-                android:layout_margin="@dimen/margin_5"
                 android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:id="@+id/tab_indicator"
+                app:tabBackground="@drawable/tab_indicator"
+                app:tabIndicatorHeight="0dp"
+                app:tabGravity="center"
+                android:background="@android:color/transparent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="10dp"/>
         </RelativeLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

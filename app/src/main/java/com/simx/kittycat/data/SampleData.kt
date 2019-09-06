@@ -31,9 +31,16 @@ object SampleData {
 
     fun sampleDataCats(): List<CatTypes>{
         return listOf(
-            CatTypes("Persia","https://cdn1-production-images-kly.akamaized.net/NSkUSXA3k2pizTOhIPNMcQaOZ1c=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2763269/original/061791700_1553755379-HL_3.jpg", catPersia()),
-            CatTypes("Siam","https://upload.wikimedia.org/wikipedia/id/2/2d/Kucing_Siam.jpg", catSiam()),
-            CatTypes("Birma","https://emancipationusa.com/wp-content/uploads/2019/01/kucing-birman-mata-biru.jpg", catSiam())
+            CatTypes("Persia",
+                "https://cdn1-production-images-kly.akamaized.net/NSkUSXA3k2pizTOhIPNMcQaOZ1c=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2763269/original/061791700_1553755379-HL_3.jpg",
+                CatTypes.DataCats(catPersia())),
+            CatTypes("Siam",
+                "https://upload.wikimedia.org/wikipedia/id/2/2d/Kucing_Siam.jpg",
+                CatTypes.DataCats(
+                catSiam())),
+            CatTypes("Birma",
+                "https://emancipationusa.com/wp-content/uploads/2019/01/kucing-birman-mata-biru.jpg",
+                CatTypes.DataCats(catSiam()))
         )
     }
 }

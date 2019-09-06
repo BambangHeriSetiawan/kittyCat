@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.home.detail.DetailCatActivity"></activity>
+        <activity android:name=".ui.home.detail.DetailCatActivity"
+            android:theme="@style/AppTheme.ActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"

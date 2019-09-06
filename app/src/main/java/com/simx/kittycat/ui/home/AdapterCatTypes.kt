@@ -6,13 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.simx.kittycat.R
 import com.simx.kittycat.data.model.CatTypes
-import com.simx.kittycat.data.model.Cats
 import com.simx.kittycat.databinding.ItemCatTypeBinding
 
 /**
  * Created by simx on 07,September,2019
  */
-class AdapterCatTypes (private var items:List<CatTypes>, private var listener:OnAdapterCatTypesListener): RecyclerView.Adapter<AdapterCatTypes.Holder>(){
+class AdapterCatTypes (private var items:List<CatTypes>, private var listener: OnAdapterCatTypesListener): RecyclerView.Adapter<AdapterCatTypes.Holder>(){
     /**
      * Called when RecyclerView needs a new [ViewHolder] of the given type to represent
      * an item.
@@ -76,13 +75,13 @@ class AdapterCatTypes (private var items:List<CatTypes>, private var listener:On
     }
 
     interface OnAdapterCatTypesListener {
-        fun onClicked(data: List<Cats>?)
+        fun onClicked(data: CatTypes.DataCats?)
     }
 
     class Holder(var binding: ItemCatTypeBinding):RecyclerView.ViewHolder(binding.root) {
         fun bind(data:CatTypes){
             with(binding){
-                itemCatTypeVm = ItemCatsTrpeVM(data)
+                itemCatTypeVm = ItemCatsTypeVM(data)
                 executePendingBindings()
             }
         }
