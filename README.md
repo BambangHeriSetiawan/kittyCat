@@ -16,8 +16,13 @@ Android Studion 3.5
 Language Kotlin
 ```
 
-### If you get build problem , please try
+### If you get build problem like,
+```
+Execution failed for task ':app:dataBindingGenBaseClassesDebug'.
+```
+please try
 
 ```
-./gradlew clean asembleDebug
+./gradlew assembleDebug --rerun-tasks
+
 ```
