@@ -14,7 +14,11 @@ class AppBindingAdapter {
     companion object {
         @BindingAdapter("bind:image_asset") @JvmStatic fun loadIntImage(imageView: ImageView, url:Int){
             imageView.load(url){
-                crossfade(true)
+                transformations(RoundedCornersTransformation(2f))
+            }
+        }
+        @BindingAdapter("bind:image_url") @JvmStatic fun loadIntImageUrl(imageView: ImageView, url:String){
+            imageView.load(url){
                 transformations(RoundedCornersTransformation(2f))
             }
         }

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVm" type="com.simx.kittycat.ui.home.HomeVM"/>
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="@dimen/margin_10"
+        android:padding="@dimen/margin_5"
+        tools:listitem="@layout/item_cat_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</layout>
