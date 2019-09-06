@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="profileVm" type="com.simx.kittycat.ui.profile.ProfileVM"/>
+    </data>
+    <RelativeLayout
+        android:padding="@dimen/margin_10"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv"
+            android:layout_margin="@dimen/margin_10"
+            app:cardCornerRadius="@dimen/margin_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:padding="@dimen/margin_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:padding="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/img_profile"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Bambang Heri Setiawan"
+                        android:padding="@dimen/margin_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Male"
+                        android:padding="@dimen/margin_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="+6282138250025"
+                        android:padding="@dimen/margin_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:text="@string/logout"
+            android:layout_below="@id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>
+
+
+

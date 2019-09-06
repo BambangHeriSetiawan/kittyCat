@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable name="itemCatTypeVm" type="com.simx.kittycat.ui.home.ItemCatsTypeVM"/>
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="@dimen/margin_5"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <ImageView
+                bind:image_url="@{itemCatTypeVm.image}"
+                android:src="@drawable/placeholder"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="@dimen/margin_5"
+                    android:text="@{itemCatTypeVm.name}"
+                    android:padding="@dimen/margin_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
+
